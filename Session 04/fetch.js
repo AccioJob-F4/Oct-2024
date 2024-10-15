@@ -62,6 +62,7 @@ const url = "https://jsonplaceholder.typicode.com/todos/1";
 // ========================================================================================
 
 // Promise Chaining
+
 fetch("https://jsonplaceholder.typicode.com/users/1")
   .then((response) => {
     return response.json();
