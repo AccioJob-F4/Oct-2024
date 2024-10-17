@@ -11,6 +11,8 @@
       let submitBtn = document.getElementById("submit-btn");
 
       submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
         console.log("🚀 ~ submitBtn.addEventListener ~ e:", e);
         alert("Clicked");
         setTimeout(() => {
