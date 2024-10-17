@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="email" id="email-Input" placeholder="Enter your email" />
+    <button id="submit-btn">Submit</button>
+
+    <script>
+      let emailInput = document.getElementById("email-Input");
+      let submitBtn = document.getElementById("submit-btn");
+
+      submitBtn.addEventListener("click", (e) => {
+        console.log("🚀 ~ submitBtn.addEventListener ~ e:", e);
+        alert("Clicked");
+        setTimeout(() => {
+          if (emailInput.value === "") alert("Input box is empty");
+          else alert(`Input box has a value: ${emailInput.value}`);
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
