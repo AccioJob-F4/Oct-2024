@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Task Manager</h1>
+    </header>
+
+    <main>
+      <section id="task-form-section">
+        <h2>Add New Task</h2>
+
+        <form id="task-form">
+          <div>
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="taskName" required />
+          </div>
+
+          <div>
+            <label for="task-category">Category:</label>
+            <select id="task-category" name="taskCategory">
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="task-deadline">Deadline:</label>
+            <input type="date" id="task-deadline" name="taskDeadline" />
+          </div>
+
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section id="task-list-section">
+        <h2>Task List</h2>
+        <div id="search-filter">
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Search by Task Name"
+          />
+
+          <select id="filter-category">
+            <option value="All">All Categories</option>
+            <option value="Work">Work</option>
+            <option value="Personal">Personal</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+        </div>
+
+        <ul id="task-list">
+          <li class="task-item" data-id="ABC">
+            <h3>Task 01</h3>
+            <p>Category: XYZ</p>
+            <p>Deadline: PQR</p>
+            <div class="task-actions">
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
